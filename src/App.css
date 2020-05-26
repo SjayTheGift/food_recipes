@@ -1,38 +1,109 @@
-.App {
+*{
+    box-sizing: border-box;
+}
+
+.container{
+  max-width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row-center{  
+  display: flex;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+/* Main column */
+.main {
+  width: 30%;
+  margin: 10px;
+}
+
+/* fluid image size */
+.fluid-img {
+  width: 100%;
+  padding: 20px;
+}
+
+.text-center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-box-shadow{
+  padding: 5px;
+  /* box-shadow: 5px 5px 18px #888888; */
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  background-image: linear-gradient(120deg, #243949 0%, #022d4e 100%);
+  margin-top: 8px;
+  vertical-align: middle;
+  color:#f8feff;
+}
+li{
+   margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #243949;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type=button], input[type=submit], input[type=reset] {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  border: none;
   color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button[type=button], button[type=submit], button[type=reset] {
+  /* background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); */
+  background-image: linear-gradient(120deg, #243949 0%, #022d4e 100%);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  color: #c2e9fb;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
 }
